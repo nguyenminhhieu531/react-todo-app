@@ -36,7 +36,7 @@ function Control(props) {
     <div className="row">
       <Search onClickGo={props.onClickSearchGo}></Search>
       <Sort onClickSort={onClickSort} orderBy={orderBy} orderDir={orderDir}></Sort>
-      <div className="col-xs-5 col-sm-5 col-md-5 col-lg-5">{elmButton}</div>
+      <div className="col-xs-12 col-sm-12 col-md-5 col-lg-5">{elmButton}</div>
     </div>
   );
 }

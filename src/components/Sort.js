@@ -10,7 +10,7 @@ function Sort(props) {
   let orderDir = props.orderDir;
   let strSort = orderBy + "-" + orderDir;
   return (
-    <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
       <div className="dropdown">
         <button
           className="btn btn-default dropdown-toggle"

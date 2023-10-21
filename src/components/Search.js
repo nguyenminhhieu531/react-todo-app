@@ -19,7 +19,7 @@ function Search(props) {
   }
 
   return (
-    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
       <div className="input-group">
         <input
           value={strSearch}
