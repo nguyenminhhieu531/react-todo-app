@@ -15,7 +15,8 @@ function App(props) {
   const [itemSelected, setItemSelected] = useState(null);
 
   useEffect(() => {
-    let itemsLocalStorage = JSON.parse(localStorage.getItem("task"));
+    let itemsLocalStorage = [];
+    itemsLocalStorage = JSON.parse(localStorage.getItem("task"));
     setItems(itemsLocalStorage);
   }, []);
 
