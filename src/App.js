@@ -6,7 +6,7 @@ import List from "./components/List";
 import { filter, includes, orderBy as funcOrderBy } from "lodash";
 import { v4 as uuidv4 } from "uuid";
 
-function App(props) {
+function App() {
   const [items, setItems] = useState([]);
   const [isShowForm, setIsShowForm] = useState(false);
   const [strSearch, setStrSearch] = useState("");
@@ -15,8 +15,7 @@ function App(props) {
   const [itemSelected, setItemSelected] = useState(null);
 
   useEffect(() => {
-    let itemsLocalStorage = [];
-    itemsLocalStorage = JSON.parse(localStorage.getItem("task"));
+    let itemsLocalStorage = JSON.parse(localStorage.getItem("task")) || [];
     setItems(itemsLocalStorage);
   }, []);
 
@@ -81,6 +80,7 @@ function App(props) {
   itemsFilter = filter(items || [], (item) => {
     return includes(item.name.toLowerCase(), strSearch.toLowerCase());
   });
+
   // Search Cách 2
   // itemsOrigin.forEach((item) => {
   //   if (item.name.toLowerCase().indexOf(search.toLowerCase()) !== -1) {
